@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Home | {{ block.super }} {% endblock%}
+
+{% block header %}
+<div class="jumbotron">
+	<h1 class="display-4">MyMDB App</h1>
+	<p class="lead">A MyMDB website built with Django</p>
+	<p class="lead">
+		<a href="{% url 'movie_list' %}" class="btn btn-primary btn-lg" role="button">View All Movies</a>
+	</p>
+</div>
+{% endblock %}
