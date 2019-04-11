@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'user.apps.UserConfig',
     'core.apps.CoreConfig',
     'pages.apps.PagesConfig',
 
@@ -85,17 +86,12 @@ DATABASES = {
         'NAME': 'ujang_mymdb',
         'USER': 'ujang_mymdb',
         'PASSWORD': 'ujang_mymdb',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
+        'TEST': {
+            'NAME': 'test_ujang_mymdb',
+        }
     },
-    'test': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_ujang_mymdb',
-        'USER': 'test_ujang_mymdb',
-        'PASSWORD': 'test_ujang_mymdb',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
 }
 
 
